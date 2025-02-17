@@ -21,6 +21,7 @@ const ChatContainer = () => {
 
   useEffect(() => {
     getMessages(selectedUser._id);
+
     subscribeToMessages();
 
     return () => unsubscribeFromMessages();
@@ -46,6 +47,7 @@ const ChatContainer = () => {
       </div>
     );
   }
+
   return (
     <div className="flex-1 flex flex-col overflow-auto">
       <ChatHeader />
@@ -94,5 +96,4 @@ const ChatContainer = () => {
     </div>
   );
 };
-
 export default ChatContainer;
